@@ -33,4 +33,4 @@ jobs:
 
       - name: Build and push image with Jib
         run: |
-          ./gradlew jib --image=${{ steps.login-ecr.outputs.registry }}/${{ secrets.ECR_REPOSITORY }}:${{ github.sha }
+          ./gradlew jib --image=${{ steps.login-ecr.outputs.registry }}/${{ secrets.ECR_REPOSITORY }}:${{ github.sha }}
