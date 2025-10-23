@@ -3,7 +3,7 @@ name: Fineract Comfi Dev Workflow - OIDC to ECR
 on:
   push:
     branches:
-      - COM-6
+      - comfi
 env:
   ecr_repository: fineract/comfi-eu-north-1/dev/backend
   ecr_deploy_role: arn:aws:iam::126919341121:role/comfi-eu-north-1-dev-ghdeploy-role-backend
