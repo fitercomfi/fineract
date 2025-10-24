@@ -281,6 +281,15 @@ jib {
         implementation 'org.mariadb.jdbc:mariadb-java-client'
         implementation 'org.postgresql:postgresql'
     }
+    extraDirectories {
+        paths {
+            path {
+                from = file('../fineract-report/pentahoReports')
+                into = '/root/.mifosx/pentahoReports'
+            }
+        }
+    }
+
 }
 
 tasks.register('migrateDatabase') {
