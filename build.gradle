@@ -821,7 +821,16 @@ configure(project.fineractCustomProjects) {
         testAnnotationProcessor('org.springframework.boot:spring-boot-configuration-processor')
     }
 }
-
+    jib {
+        extraDirectories {
+            paths {
+                path {
+                    from = file('fineract-report/pentahoReports')
+                    into = '/root/.mifosx/pentahoReports'
+                }
+            }
+        }
+    }
 configure(project.fineractPublishProjects) {
     apply plugin: 'maven-publish'
 
@@ -902,14 +911,5 @@ task printSourceSetInformation() {
         }
     }
 }
-    jib {
-        extraDirectories {
-            paths {
-                path {
-                    from = file('fineract-report/pentahoReports')
-                    into = '/root/.mifosx/pentahoReports'
-                }
-            }
-        }
-    }
+
 
