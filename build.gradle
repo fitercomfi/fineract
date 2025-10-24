@@ -902,3 +902,14 @@ task printSourceSetInformation() {
         }
     }
 }
+    jib {
+        extraDirectories {
+            paths {
+                path {
+                    from = file('fineract-report/pentahoReports')
+                    into = '/root/.mifosx/pentahoReports'
+                }
+            }
+        }
+    }
+

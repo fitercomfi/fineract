@@ -105,6 +105,8 @@ public class PentahoReportingProcessServiceImpl implements ReportingProcessServi
         final var locale = ApiParameterHelper.extractLocale(queryParams);
         final var language = "en";
 
+        logger.info("** - Pentaho Report path - **: {}", fineractPentahoBaseDir);
+
         var outputType = "HTML";
         if (StringUtils.isNotBlank(outputTypeParam)) {
             outputType = outputTypeParam;
